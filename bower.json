@@ -1,0 +1,18 @@
+{
+  "name": "skybox",
+  "authors": [
+    "Graham Wimbrow <graham.wimbrow@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "bower_components"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "lodash": "^4.17.4"
+  }
+}

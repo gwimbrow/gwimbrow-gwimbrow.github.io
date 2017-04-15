@@ -1,0 +1,62 @@
+body {
+  perspective: 1024px;
+  overflow: hidden;
+}
+
+section {
+  position: relative;
+
+}
+
+header {
+
+}
+
+
+footer {
+}
+
+#scene {
+  position: absolute;
+  transform-style: preserve-3d;
+  transform: translateZ(1024px);
+  top: 50%;
+  left: 50%;
+  margin: -1024px 0 0 -1024px;
+}
+
+#skybox {
+    width: 2048px;
+    height: 2048px;
+    transform-style: preserve-3d;
+}
+.cube-face {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  box-shadow: 0 0 64px;
+}
+.cube-face-front {
+  transform: translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetFront2048.png);
+}
+.cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetBack2048.png);
+}
+.cube-face-left {
+  transform: rotateY(90deg) translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetLeft2048.png);
+}
+.cube-face-right {
+  transform: rotateY(-90deg) translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetRight2048.png);
+}
+.cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetUp2048.png);
+}
+.cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 1024px);
+  background-image: url(../images/skybox/SunSet/SunSetDown2048.png);
+}
