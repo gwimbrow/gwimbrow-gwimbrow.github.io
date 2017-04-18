@@ -26,7 +26,7 @@
 	      <div class="face cube-bottom"></div>
 	    </div>
     </div>
-    <div id="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi eu diam quis urna vulputate fringilla vitae nec enim. Etiam nisl metus, dapibus id aliquet eget, lacinia et eros. Nunc et maximus nisl. Donec scelerisque est non commodo lacinia. Proin sollicitudin facilisis neque, sit amet sodales nulla convallis eu. Maecenas tempus augue a pretium auctor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus malesuada justo id lacus posuere finibus.</div>
+    <div id="content">Click anywhere to activate mouselook, then deactivate by pressing ESC. Go fullscreen for the best experience!</div>
     <script>
 
       let x = 0;
@@ -34,6 +34,7 @@
 
       let scene = document.getElementById('scene');
       let skybox = document.getElementById('skybox');
+      let content = document.getElementById('content');
 
       const trace = _.throttle(e => {
 
@@ -52,8 +53,10 @@
       document.addEventListener('pointerlockchange', function () {
         if (this.pointerLockElement === document.body) {
           document.body.addEventListener('mousemove', trace);
+          content.style['opacity'] = '0';
         } else {
           document.body.removeEventListener('mousemove', trace);
+          content.style['opacity'] = '1';
         }
       });
 

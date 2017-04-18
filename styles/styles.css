@@ -11,10 +11,12 @@ body {
   border-width: 1px;
   color: hsl(0, 0%, 100%);
   padding: 1em;
+  text-align: center;
   font-size: 14px;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont,     "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",     "Fira Sans", "Droid Sans", "Helvetica Neue",     sans-serif;
-  box-shadow: inset 0 0 50px -12.5px hsl(0, 0%, 75%), 0 0 50px -12.5px hsla(0, 0%, 75%, 0.5);
+  box-shadow: 0 0 50px -12.5px hsla(0, 0%, 75%, 0.5);
+  transition: opacity 500ms;
 }
 
 #scene, #skybox {
